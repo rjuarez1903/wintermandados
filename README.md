@@ -2,7 +2,7 @@
 
 # Winter Mandados
 
-Escuela Dev Rock Challenge 03
+Escuela Dev Rock Winterhack - Challenge 03
 
 To-do list
 
