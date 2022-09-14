@@ -1,0 +1,406 @@
+/* -------
+   GENERAL
+   -------     
+*/
+
+html {
+    background: url("../images/bg-food.webp") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    color: #231F20;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+/* ----------
+   TYPOGRAPHY
+   ---------- 
+*/
+
+p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+h1 {    
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px;
+    letter-spacing: 3px;
+    color: #231F20;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+
+/*  ------
+    LAYOUT
+    ------
+*/
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.sp-between {
+    justify-content: space-between;
+}
+
+.centered {
+    text-align: center;
+}
+
+.off {
+    display: none;
+}
+
+.on {
+    display: block;
+}
+
+#overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#main-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#container {
+    padding-top: 40px;
+    padding-bottom: 80px; 
+}
+
+
+header {
+    background-color: #EF4F39;
+}
+
+#splash {
+    line-height: 1.5;
+    padding: 40px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#empty {
+    color: #37BAA2;
+}
+
+#formulario {
+    height: fit-content;
+    margin: 0 20px 0px;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #259ED5;
+    box-shadow: 6px 8px 25px -9px rgba(0,0,0,0.75);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+}
+
+input, 
+select {
+    margin: 2px 0;
+    padding: 10px;
+}
+
+option {
+    color: #231F20;
+    font-size: 20px;
+}
+
+label {
+    margin: 10px 0;
+}
+
+textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+input, 
+select,
+label, 
+textarea {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#elemento-cargado {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+#elemento-mostrado {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: 20%;
+    background-color: #F8C31F;
+    border-radius: 20px;
+    box-shadow: 6px 8px 25px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 8px 25px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 8px 25px -9px rgba(0,0,0,0.75);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text {
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.list-item {
+    border-radius: 20px;
+    background-color: #37BAA2;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+footer {
+    background-color: #231F20;
+    color: #E4E4E5;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------
+   IMAGES
+   ------ 
+*/
+
+.img {
+    background-color: #E4E4E5;
+    border: 5px solid #231F20;
+    border-radius: 50%;
+}
+
+.img-list {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-list img,
+.img-detail img {
+    width: 60%;
+}
+
+.img-detail {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-detail img {
+    display: block;
+}
+
+/* -------
+   BUTTONS
+   ------- 
+*/
+
+.add-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #EF4F39;
+    color: #231F20;
+    border: none;
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+    cursor: pointer;
+    scale: 1;
+    transition: 300ms;
+}
+
+.add-btn:hover {
+    color: #E4E4E5;
+    scale: 1.1;
+}
+
+.btn-agrega {
+    background: #F8C31F;
+    color: #231F20;
+    font-family: inherit;
+    padding: 9px 21px;
+    font-weight: 900;
+    font-size: 14px;
+    border: 3px solid #231F20;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+}
+   
+.btn-agrega:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+   }
+   
+.btn-agrega:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+/* -----
+   ICONS
+   -----
+*/
+
+.fa-x {
+    float: right;
+    cursor: pointer;
+}
+
+.fa-x:hover {
+    color: #EF4F39;
+    float: right;
+    cursor: pointer;
+}
+
+.fa-face-sad-cry {
+    padding-top: 10px;
+    display: block;
+}
+
+/* ------------- 
+   MEDIA QUERIES
+   ------------- 
+*/
+
+@media screen and (min-width: 768px) {
+
+    p {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #container {
+        display: flex;
+        max-width: 1400px; 
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    #splash {
+        display: block;
+        order: 2;
+        flex: 3;
+    }
+
+    #plus-btn, 
+    #plus-btn2 {
+        display: none;
+    }
+
+    .btn-agrega {
+        padding: 9px 21px;
+        font-size: 18px;
+    }
+
+    #formulario {
+        order: 1;
+        display: block;
+        flex-direction: column;
+    }
+
+    form {
+        font-size: 16px;
+    }
+
+    #cierra-formu {
+        display: none;
+    }
+
+    #elemento-cargado {
+        flex: 0;
+        order: 2;
+        display: flex;
+    }
+
+    #elemento-mostrado {
+        max-width: 40%;
+    }
+
+    .img-list {
+        width: 90px;
+        height: 90px;
+    }
+
+    .img-detail {
+        width: 180px;
+        height: 180px;
+    }
+
+    #lista {
+        width: 100%;
+    }
+
+    .card-text {
+        width: 50%;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mandados Planner te permite organizar tus compras según categoría" />
+    <meta name="keywords" content="to do list, planner, mandados" />
+    <meta name="author" content="Rodrigo Juarez" />
+    <meta name="copyright" content="il Mostro 2022" />
+    <meta name="robots" content="index" />
+    
+    <meta property="og:title" content="Mandados Planner"/>
+    <meta property="og:description" content="Mandados Planner te permite organizar tus compras según categoría" />
+    <meta property="og:type" content="To do list" />
+    <meta property="og:image" content="images/cart.jpeg" />
+    <meta property="og:url" content="https://wintermandados.web.app/" />
+
+    <meta property="twitter:title" content="Mandados Planner"/>
+    <meta property="twitter:description" content="Mandados Planner te permite organizar tus compras según categoría" />
+    <meta property="twitter:type" content="To do list" />
+    <meta property="twitter:image" content="images/cart.jpeg" />
+    <meta property="twitter:url" content="https://wintermandados.web.app/" />
+
+    <script src="https://kit.fontawesome.com/2cd05a3c76.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png"  href="images/cart-logo.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <title>Mandados Planner</title>
+</head>
+<body>
+    
+    <div id="main-container">
+        <header class="centered">
+            <h1>Mandados Planner</i></h1>
+        </header>
+
+        <div id="container">
+            <section id="splash">
+                <h2 id="empty">No hay productos para comprar <i class="fa-regular fa-face-sad-cry"></i></h2>
+                <button type="button" id="plus-btn" class="add-btn"><i class="fa-solid fa-plus"></i></button>
+            </section>
+
+            <section id="formulario" class="off">
+                <i id="cierra-formu" class="fa-solid fa-x"></i>
+                <h3>Armá tu lista</h3>
+                <form action="#">
+                    <label for="titulo" >Producto: </label>
+                    <input type="text" id="titulo" maxlength="12" required>
+                    <label for="icono">Categoría:</label>
+                    <select id="icono" required>
+                        <option value="">Elegí!</option>
+                        <option value="viveres.png">🍞 Víveres</option>
+                        <option value="lacteos.png">🥛 Lácteos</option>
+                        <option value="verduras.png">🥕 Verduras</option>
+                        <option value="electronica.png">💻 Electrónica</option>
+                    </select>
+                    <label for="descripcion">Descripción: </label>
+                    <textarea cols="30" rows="5" id="descripcion" maxlength="240" required></textarea>
+                    <input type="submit" class="btn-agrega" value="Agregar" id="agregar">
+                </form>
+            </section>
+
+            <section id="elemento-cargado" class="off">
+                <ul id="lista"></ul>
+                <button type="button" id="plus-btn2" class="add-btn"><i class="fa-solid fa-plus"></i></button>
+            </section>
+            <div id="overlay">
+                <section id="elemento-mostrado" class="off"></section>
+            </div>
+        </div>
+        
+        <footer class="d-flex">
+            <small>Creado por il Mostro</small>
+        </footer>
+    </div>
+    
+    <script src="js/index.js"></script>
+   
+</body>
+</html>
